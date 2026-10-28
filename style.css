@@ -1,0 +1,159 @@
+/* --- CSS GLOBAL --- */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container utama untuk membatasi lebar (simulasi HP) */
+.mobile-container {
+    width: 350px;
+    height: 600px;
+    background-color: white;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Kelas untuk mengatur halaman mana yang tampil */
+.page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.page.active {
+    display: flex; /* Hanya halaman dengan class 'active' yang tampil */
+}
+
+/* --- STYLING HALAMAN LOGIN --- */
+.header-text {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.header-text h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.header-text h3 {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.input-group {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #eee;
+}
+
+#btn-login {
+    align-self: center; 
+    margin-top: 5px;
+}
+
+/* --- STYLING HALAMAN HOME --- */
+#home-page {
+    padding-top: 30px;
+}
+
+.home-title {
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Profil Box */
+.profile-section {
+    border: 2px solid black;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.photo-box {
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-name {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Grid Menu */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    border: 2px solid black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Tombol Logout di Home */
+#btn-logout {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
